@@ -18,7 +18,7 @@ def plot2d(x, y, x2=None, y2=None, x3=None, y3=None, xlim=(-1, 1), ylim=(-1, 1),
         plt.show()
     return
 
-def plot1d(x, x2=None, x3=None, ylim=(-1, 1), save_file=""):
+def plot1d(x, x2=None, x3=None, ylim=(-10, 10), save_file=""):
     import matplotlib.pyplot as plt
 
     plt.figure(figsize=(6, 3))
