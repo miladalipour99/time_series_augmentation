@@ -36,7 +36,7 @@ def permutation(x, max_segments=5, seg_mode="equal"):
             ret[i] = pat
     return ret
 
-def magnitude_warp(x, sigma=0.2, knot=4):
+def magnitude_warp(x, sigma=2, knot=4):
     from scipy.interpolate import CubicSpline
     orig_steps = np.arange(x.shape[1])
     
