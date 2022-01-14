@@ -98,7 +98,12 @@ if __name__ == "__main__":
     # Augment data
     x_train, y_train, augmentation_tags = run_augmentation(x_train, y_train, args)
     model_prefix = "%s_%s%s"%(args.model, args.dataset, augmentation_tags)
-        
+    print('x_train:',x_train)
+    print('x_train_type:',type(x_train))
+    print('x_train_shape:',x_train.shape)
+    print('y_train:',y_train)
+    print('y_train_type:',type(y_train))
+    print('y_train_shape:',y_train.shape)
     nb_iterations = args.iterations
     batch_size = args.batch_size
     nb_epochs=100
