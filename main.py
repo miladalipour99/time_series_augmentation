@@ -101,7 +101,8 @@ if __name__ == "__main__":
         
     nb_iterations = args.iterations
     batch_size = args.batch_size
-    nb_epochs = np.ceil(nb_iterations * (batch_size / x_train.shape[0])).astype(int)
+    nb_epochs=100
+    #nb_epochs = np.ceil(nb_iterations * (batch_size / x_train.shape[0])).astype(int)
     
     model = mod.get_model(args.model, input_shape, nb_class)
     
