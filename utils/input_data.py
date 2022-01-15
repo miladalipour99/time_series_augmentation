@@ -45,7 +45,7 @@ def get_datasets(args):
             x_train, y_train, x_test, y_test = read_data_sets(x_train_file, y_train_file, x_test_file, y_test_file, test_split=args.test_split, delimiter=args.delimiter)
     else:
         x_train, y_train, x_test, y_test = read_data_sets(args.train_data_file, args.train_labels_file, args.test_data_file, args.test_labels_file, test_split=args.test_split, delimiter=args.delimiter)
-    
+    print('train_data_file:',train_data_file )
     # Normalize
     if args.normalize_input:
         x_train_max = np.nanmax(x_train)
