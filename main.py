@@ -98,7 +98,7 @@ if __name__ == "__main__":
     # Augment data
     x_train, y_train, augmentation_tags = run_augmentation(x_train, y_train, args)
     model_prefix = "%s_%s%s"%(args.model, args.dataset, augmentation_tags)
-    np.savetxt('x_train.csv', np.squeeze(x_train)), delimiter=",")
+    np.savetxt('x_train.csv', np.squeeze(x_train), delimiter=",")
     np.savetxt('y_train.csv', y_train, delimiter=",")
     with open("Output.txt", "w") as text_file:
         print(f"Output: {augmentation_tags}", file=text_file)
