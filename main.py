@@ -100,16 +100,18 @@ if __name__ == "__main__":
     model_prefix = "%s_%s%s"%(args.model, args.dataset, augmentation_tags)
     np.savetxt('x_train.csv', np.squeeze(x_train), delimiter=",")
     np.savetxt('y_train.csv', y_train, delimiter=",")
+    np.savetxt('x_test.csv', np.squeeze(x_test), delimiter=",")
+    np.savetxt('y_test.csv', y_train, delimiter=",")
     with open("Output.txt", "w") as text_file:
         print(f"Output: {augmentation_tags}", file=text_file)
-    print('x_test:',x_test)
-    print('x_test_type:',type(x_test))
-    print('x_test_shape:',x_test.shape)
-    print('y_test:',y_test)
-    print('y_test_type:',type(y_test))
-    print('y_test_shape:',y_test.shape)
-    print('augmentation_tags:',augmentation_tags)
-    print('augmentation_tags type:',type(augmentation_tags))
+   # print('x_test:',x_test)
+   # print('x_test_type:',type(x_test))
+   # print('x_test_shape:',x_test.shape)
+   # print('y_test:',y_test)
+   # print('y_test_type:',type(y_test))
+   # print('y_test_shape:',y_test.shape)
+   # print('augmentation_tags:',augmentation_tags)
+   # print('augmentation_tags type:',type(augmentation_tags))
     nb_iterations = args.iterations
     batch_size = args.batch_size
     nb_epochs=100
