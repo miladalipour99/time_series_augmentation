@@ -102,14 +102,14 @@ if __name__ == "__main__":
     np.savetxt('y_train.csv', y_train, delimiter=",")
     with open("Output.txt", "w") as text_file:
         print(f"Output: {augmentation_tags}", file=text_file)
-   # print('x_train:',x_train)
-   # print('x_train_type:',type(x_train))
-   # print('x_train_shape:',x_train.shape)
-   # print('y_train:',y_train)
-   # print('y_train_type:',type(y_train))
-   # print('y_train_shape:',y_train.shape)
-   # print('augmentation_tags:',augmentation_tags)
-   # print('augmentation_tags type:',type(augmentation_tags))
+    print('x_test:',x_test)
+    print('x_test_type:',type(x_test))
+    print('x_test_shape:',x_test.shape)
+    print('y_test:',y_test)
+    print('y_test_type:',type(y_test))
+    print('y_test_shape:',y_test.shape)
+    print('augmentation_tags:',augmentation_tags)
+    print('augmentation_tags type:',type(augmentation_tags))
     nb_iterations = args.iterations
     batch_size = args.batch_size
     nb_epochs=100
