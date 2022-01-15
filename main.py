@@ -98,16 +98,18 @@ if __name__ == "__main__":
     # Augment data
     x_train, y_train, augmentation_tags = run_augmentation(x_train, y_train, args)
     model_prefix = "%s_%s%s"%(args.model, args.dataset, augmentation_tags)
-   ## np.savetxt('x_train.csv', np.squeeze(x_train)), delimiter=",")
-   ## np.savetxt('y_train.csv', y_train, delimiter=",")
+    np.savetxt('x_train.csv', np.squeeze(x_train)), delimiter=",")
+    np.savetxt('y_train.csv', y_train, delimiter=",")
+    with open("Output.txt", "w") as text_file:
+        print(f"Output: {augmentation_tags}", file=text_file)
    # print('x_train:',x_train)
    # print('x_train_type:',type(x_train))
    # print('x_train_shape:',x_train.shape)
    # print('y_train:',y_train)
    # print('y_train_type:',type(y_train))
    # print('y_train_shape:',y_train.shape)
-    print('augmentation_tags:',augmentation_tags)
-    print('augmentation_tags type:',type(augmentation_tags))
+   # print('augmentation_tags:',augmentation_tags)
+   # print('augmentation_tags type:',type(augmentation_tags))
     nb_iterations = args.iterations
     batch_size = args.batch_size
     nb_epochs=100
