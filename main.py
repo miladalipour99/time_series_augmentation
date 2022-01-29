@@ -102,7 +102,7 @@ if __name__ == "__main__":
     np.savetxt('x_train.csv', np.squeeze(x_train), delimiter=",")
     np.savetxt('y_train.csv', y_train, delimiter=",")
     np.savetxt('x_test.csv', np.squeeze(x_test), delimiter=",")
-    np.savetxt('y_test.csv', y_train, delimiter=",")
+    np.savetxt('y_test.csv', y_test, delimiter=",")
     with open("Output.txt", "w") as text_file:
         print(f"Output: {augmentation_tags}", file=text_file)
    # print('x_test:',x_test)
