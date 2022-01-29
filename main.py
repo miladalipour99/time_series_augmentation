@@ -82,7 +82,8 @@ if __name__ == "__main__":
     
     nb_class = ds.nb_classes(args.dataset)
     nb_dims = ds.nb_dims(args.dataset)
-        
+    print('nb_class=',nb_class)
+    print('nb_dims=',nb_dims)
     # Load data
     x_train, y_train, x_test, y_test = get_datasets(args)
     
