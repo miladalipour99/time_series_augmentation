@@ -93,8 +93,8 @@ if __name__ == "__main__":
     # Process data
     x_test = x_test.reshape((-1, input_shape[0], input_shape[1])) 
     x_train = x_train.reshape((-1, input_shape[0], input_shape[1])) 
-    y_test = to_categorical(ds.class_offset(y_test, args.dataset), nb_class)
-    y_train = to_categorical(ds.class_offset(y_train, args.dataset), nb_class)
+    y_test = to_categorical(ds.class_offset(y_test, args.dataset), 2)
+    y_train = to_categorical(ds.class_offset(y_train, args.dataset), 2)
     
     # Augment data
     x_train, y_train, augmentation_tags = run_augmentation(x_train, y_train, args)
